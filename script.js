@@ -5,7 +5,7 @@ const header = document.querySelector("header");
 const burger = document.querySelector(".burger-menu");
 const mobileNav = document.querySelector(".mobile-nav");
 const navLinks = document.querySelectorAll('a[href^="#"]');
-const signupBtn = document.querySelector(".sign-up-button"); // your existing button
+const signupBtn = document.querySelector(".sign-up-button");
 const overlay = document.getElementById("signupOverlay");
 const closeSignup = document.getElementById("closeSignup");
 const form = document.querySelector(".register-form")
