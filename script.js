@@ -6,9 +6,12 @@ const burger = document.querySelector(".burger-menu");
 const mobileNav = document.querySelector(".mobile-nav");
 const navLinks = document.querySelectorAll('a[href^="#"]');
 const signupBtn = document.querySelector(".sign-up-button");
-const overlay = document.getElementById("signupOverlay");
+const overlay = document.getElementById("signup");
 const closeSignup = document.getElementById("closeSignup");
 const form = document.querySelector(".register-form")
+const a = document.querySelectorAll(".sections-navigation a")
+const secnav = document.querySelector(".sections-navigation")
+
 
 burger.addEventListener("click", () => {
   mobileNav.classList.toggle("open");
@@ -67,18 +70,58 @@ currencies.forEach(currency => {
 });
 
 
-header.addEventListener("mouseenter", () => {
+header.addEventListener("mouseenter", (e) => {
   header.animate(
-    [{ height: "125px" }, { height: "150px" }],
-    { duration: 200, fill: "forwards" },
+    [{ height: "150px" }, { height: "200px" }],
+    { duration: 200, fill: "forwards" }
   );
+
+  a.forEach(item => {
+    item.style.display = "flex";
+  });
+  secnav.style.display = "flex";
+  secnav.style.width = "600px";
+  secnav.style.justifyContent = "space-between";
+  secnav.style.padding = "30px";
+  secnav.style.fontSize =  "1.5rem";
+  secnav.style.marginTop = "100px";
+  secnav.style.transition = "0.5s";
+
 });
 
+const isDesktop = window.matchMedia("(min-width: 421px)");
+
+header.addEventListener("mouseenter", () => {
+  if (!isDesktop.matches) return;
+
+  header.animate(
+    [{ height: "150px" }, { height: "200px" }],
+    { duration: 200, fill: "forwards" }
+  );
+
+  secnav.style.display = "flex";
+  secnav.style.width = "600px";
+  secnav.style.justifyContent = "space-between";
+  secnav.style.padding = "30px";
+  secnav.style.fontSize = "1.5rem";
+  secnav.style.marginTop = "100px";
+});
+
+
+
 header.addEventListener("mouseleave", () => {
+  if (!isDesktop.matches) return;
+
   header.animate(
     [{ height: "150px" }, { height: "125px" }],
-    { duration: 200, fill: "forwards" },
+    { duration: 300, fill: "forwards" }
   );
+
+  a.forEach(item => {
+    item.style.display = "none";
+  });
+
+  secnav.style.display = "none";
 });
 
 
