@@ -6,7 +6,7 @@ const burger = document.querySelector(".burger-menu");
 const mobileNav = document.querySelector(".mobile-nav");
 const navLinks = document.querySelectorAll('a[href^="#"]');
 const signupBtn = document.querySelector(".sign-up-button");
-const overlay = document.getElementById("signup");
+const overlay = document.getElementById("signupOverlay");
 const closeSignup = document.getElementById("closeSignup");
 const form = document.querySelector(".register-form")
 const a = document.querySelectorAll(".sections-navigation a")
@@ -129,6 +129,7 @@ signupBtn.addEventListener("click", () => {
   overlay.style.display = "flex";
   document.body.classList.add("no-scroll");
 });
+
 
 closeSignup.addEventListener("click", hideSignup);
 overlay.addEventListener("click", (e) => {

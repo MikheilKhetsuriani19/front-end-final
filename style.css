@@ -113,7 +113,7 @@ footer {
 .hero{
     min-height: 110vh;
       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                    url('/pngs/hero-section-backgrounf.png');
+                    url('https://res.cloudinary.com/dxdn6hspb/image/upload/v1769084432/hero-section-backgrounf_p5m1rx.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -231,7 +231,7 @@ footer {
   width: 44px;
   height: 44px;
 
-  background-image: url("swap.png");
+  background-image: url("https://res.cloudinary.com/dxdn6hspb/image/upload/v1769084432/swap_qqtszw.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
