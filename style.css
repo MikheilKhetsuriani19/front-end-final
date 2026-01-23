@@ -15,6 +15,9 @@ html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
+.no-scroll {
+    overflow: hidden;
+}
 html{
   scroll-behavior: smooth;
 }
@@ -217,8 +220,8 @@ footer {
 }
 
 .currency img {
-  width: 30px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
   border-radius: 40%;
 }
 .swap {
