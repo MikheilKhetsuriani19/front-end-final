@@ -1,1 +1,1 @@
-The project for front-end finals at uni, kursi.ge replica
+The markup project for my uni finals, demonstrating skills in HTML CSS JS and CRUD operations.
